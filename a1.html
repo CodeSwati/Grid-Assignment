@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>grid css 1</title>
+
+	<style >
+	
+		div {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3,250px);
+			gap: 10px;
+			padding: 20px;
+		}
+
+		.img1{
+			grid-column-start: 1;
+			grid-column-end:3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		.img2{
+			grid-column-start: 3;
+			grid-column-end:4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		.img3{
+			grid-column-start: 1;
+			grid-column-end:2;
+			grid-row-start: 2;
+			grid-row-end: 4;
+		}
+		.img4{
+			grid-column-start: 2;
+			grid-column-end:3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+		.img5{
+			grid-column-start: 3;
+			grid-column-end:4;
+			grid-row-start: 2;
+			grid-row-end: 4;
+		}
+		.img6{
+			grid-column-start: 2;
+			grid-column-end:3;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+
+		img{
+			height:100%;
+			width:100%;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/intramuscular-injection_thumb-1-732x549.jpg" class="img1">
+		<img src="https://prestigephysicians.com/wp-content/uploads/2022/03/Benefits-of-a-Vitamin-b12-Injection-Last-scaled.jpeg" class="img2">
+		<img src="https://cdn2.vectorstock.com/i/1000x1000/27/71/female-doctor-vector-38002771.jpg" class="img3">
+		<img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2019/11/arthritisDocs-1181219798-770x553.jpg" class="img4">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQArAgaAW8dVVUtPPdacUMEkbc2Ya8WKgs69Q&usqp=CAU" class="img5">
+		<img src="https://images.theconversation.com/files/554202/original/file-20231017-27-bh0m9p.jpg?ixlib=rb-1.1.0&rect=0%2C442%2C5472%2C2736&q=45&auto=format&w=668&h=324&fit=crop" class="img6">
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+Q3) Expain the use of grid-auto-row and grid-auto-column using code examples.
+Ans) The grid-auto-rows and grid-auto-column properties set the size for the rows and columns in a grid container.This properties
+ affect only rows and columns with the size not set.
+
+HTML-
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+
+CSS-
+#grid {
+  height: 100px;
+  display: grid;
+  grid-template-areas: "a a";
+  gap: 10px;
+  grid-auto-columns: 200px;
+}
+
+#grid > div {
+  background-color: lime;
+}
+
+Q5) Explain the difference between justify-items and justify-self using code examples.
+Ans)justify-items is used on a grid container and is used to determine how grid items are spread out along a row by setting the default 
+justify-self property for all child boxes. justify-self is used to set how an individual grid item positions itself along the row/inline axis.
+
+HTML-
+<article class="container">
+  <span>First child</span>
+  <span>Second child</span>
+  <span>Third child</span>
+  <span>Fourth child</span>
+</article>
+
+CSS-
+article {
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  margin: 20px;
+  width: 300px;
+  justify-items: stretch;
+}
+
+span:nth-child(2) {
+  justify-self: start;
+}
+
+span:nth-child(3) {
+  justify-self: center;
+}
+
+span:nth-child(4) {
+  justify-self: end;
+}
+
+article span {
+  background-color: black;
+  color: white;
+  margin: 1px;
+  text-align: center;
+}
+
+article,
+span {
+  padding: 10px;
+  border-radius: 7px;
+}
